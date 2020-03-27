@@ -12,3 +12,11 @@ UT372 has an official windows interface but do not support real time data feedba
 
 ## Protocool
 
+Based on [sigrok-ut372](https://sigrok.org/wiki/UNI-T_UT372), UT372 will send USB HID packets (8 bytes), whose hex form would be:
+
+F000000000000000
+
+or 
+
+F1XX000000000000, where XX is the valid information. Every 27 packets end with F10D000000000000,F10A000000000000 will form a whole message
+
